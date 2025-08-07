@@ -1,0 +1,111 @@
+# Fichiers système
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Fichiers temporaires
+*.tmp
+*.temp
+*.log
+*.cache
+
+# Éditeurs de code
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Node.js (si utilisé plus tard)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Build et distribution
+dist/
+build/
+*.min.js
+*.min.css
+
+# Environnement
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Logs
+logs
+*.log
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage directory used by tools like istanbul
+coverage/
+
+# nyc test coverage
+.nyc_output
+
+# Dependency directories
+jspm_packages/
+
+# Optional npm cache directory
+.npm
+
+# Optional REPL history
+.node_repl_history
+
+# Output of 'npm pack'
+*.tgz
+
+# Yarn Integrity file
+.yarn-integrity
+
+# dotenv environment variables file
+.env
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Fichiers de sauvegarde
+*.bak
+*.backup
+*.old
+
+# Fichiers de configuration locaux
+config.local.js
+settings.local.json
+
+# Fichiers de test
+test-results/
+coverage/
+
+# Fichiers de déploiement
+.deploy/
+.vercel/
+.netlify/
+
+# Fichiers de cache
+.cache/
+.parcel-cache/
+
+# Fichiers de développement
+*.dev.js
+*.dev.css 

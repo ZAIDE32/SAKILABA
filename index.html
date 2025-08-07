@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sakiliba Photo - Excellence Photographique Malienne</title>
+    <meta name="description" content="Studio de photographie malien, spécialisé dans la création d'images d'auteur et la promotion de la photographie africaine.">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Open+Sans:wght@300;400;600&family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Police africaine -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Adlam:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="assets/images/logo/sakiliba-logo.png" alt="Sakiliba Photo" class="logo">
+                <span class="logo-text">Sakiliba Photo</span>
+            </div>
+            
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link active">Accueil</a>
+                <a href="about.html" class="nav-link">À propos</a>
+                <a href="photos/" class="nav-link">Nos Photos</a>
+                <a href="photographers/" class="nav-link">Photographes</a>
+                <a href="hommage.html" class="nav-link">Hommage</a>
+                <a href="prix.html" class="nav-link">Prix</a>
+                <a href="projects.html" class="nav-link">Projets</a>
+                <a href="gallery/" class="nav-link">Galerie</a>
+                <a href="blog/" class="nav-link">Actualités</a>
+                <a href="investors.html" class="nav-link">Investisseurs</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+            
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-video">
+            <video autoplay muted loop id="hero-video">
+                <source src="assets/videos/hero-cinema.mp4" type="video/mp4">
+            </video>
+            <div class="hero-overlay"></div>
+        </div>
+        
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="title-line">Capturer l'essence</span>
+                <span class="title-line">de notre culture</span>
+            </h1>
+            <p class="hero-subtitle">à travers des images puissantes et des histoires mémorables</p>
+            <div class="hero-buttons">
+                <a href="films/" class="btn btn-primary">Explorer nos films</a>
+                <a href="about.html" class="btn btn-secondary">En savoir plus</a>
+            </div>
+        </div>
+        
+        <div class="hero-scroll">
+            <div class="scroll-indicator">
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- À propos (aperçu) -->
+    <section class="about-preview">
+        <div class="container">
+            <div class="section-header">
+                <h2>Notre Mission</h2>
+                <p>Promouvoir et développer le cinéma malien à travers des productions de qualité</p>
+            </div>
+            
+            <div class="about-grid">
+                <div class="about-card">
+                    <div class="card-icon">
+                        <i class="fas fa-film"></i>
+                    </div>
+                    <h3>Production</h3>
+                    <p>Création de films d'auteur et de productions commerciales de haute qualité</p>
+                </div>
+                
+                <div class="about-card">
+                    <div class="card-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Formation</h3>
+                    <p>Formation des jeunes talents du cinéma malien</p>
+                </div>
+                
+                <div class="about-card">
+                    <div class="card-icon">
+                        <i class="fas fa-globe-africa"></i>
+                    </div>
+                    <h3>Promotion</h3>
+                    <p>Diffusion du cinéma malien sur la scène internationale</p>
+                </div>
+            </div>
+            
+            <div class="about-cta">
+                <a href="about.html" class="btn btn-outline">Découvrir notre histoire</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Films en vedette -->
+    <section class="featured-films">
+        <div class="container">
+            <div class="section-header">
+                <h2>Films en Vedette</h2>
+                <p>Nos dernières productions acclamées par la critique</p>
+            </div>
+            
+            <div class="films-carousel">
+                <div class="film-card">
+                    <div class="film-poster">
+                        <img src="assets/images/films/ngunu-ngunu-kan.jpg" alt="Ngunu Ngunu Kan">
+                        <div class="film-overlay">
+                            <a href="films/ngunu-ngunu-kan.html" class="btn btn-play">
+                                <i class="fas fa-play"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="film-info">
+                        <h3>Ngunu Ngunu Kan</h3>
+                        <p class="film-subtitle">(Les rumeurs de la guerre)</p>
+                        <p class="film-year">2023</p>
+                        <p class="film-genre">Long-métrage Fiction</p>
+                        <p class="film-director">Réalisé par Soussaba Cissé</p>
+                    </div>
+                </div>
+                
+                <div class="film-card">
+                    <div class="film-poster">
+                        <img src="assets/images/films/i-janto.jpg" alt="I Jantô">
+                        <div class="film-overlay">
+                            <a href="films/i-janto.html" class="btn btn-play">
+                                <i class="fas fa-play"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="film-info">
+                        <h3>I Jantô !</h3>
+                        <p class="film-subtitle">(Prends garde !)</p>
+                        <p class="film-year">2025</p>
+                        <p class="film-genre">Documentaire</p>
+                        <p class="film-director">Réalisé par Soussaba Cissé</p>
+                    </div>
+                </div>
+                
+                <div class="film-card">
+                    <div class="film-poster">
+                        <img src="assets/images/films/barkomo.jpg" alt="Barkomo">
+                        <div class="film-overlay">
+                            <a href="films/barkomo.html" class="btn btn-play">
+                                <i class="fas fa-play"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="film-info">
+                        <h3>Barkomo</h3>
+                        <p class="film-subtitle">Le royaume mystérieux</p>
+                        <p class="film-year">2024</p>
+                        <p class="film-genre">Long-métrage Fiction</p>
+                        <p class="film-director">Réalisé par Aboubacar Bable DRABA</p>
+                    </div>
+                </div>
+                
+                <div class="film-card">
+                    <div class="film-poster">
+                        <img src="assets/images/films/les-larmes-du-pagne.jpg" alt="Les larmes du pagne">
+                        <div class="film-overlay">
+                            <a href="films/les-larmes-du-pagne.html" class="btn btn-play">
+                                <i class="fas fa-play"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="film-info">
+                        <h3>Les larmes du pagne</h3>
+                        <p class="film-subtitle">Un drame social poignant</p>
+                        <p class="film-year">2023</p>
+                        <p class="film-genre">Court-métrage Fiction</p>
+                        <p class="film-director">Réalisé par Tapa Keita</p>
+                    </div>
+                </div>
+                
+                <div class="film-card">
+                    <div class="film-poster">
+                        <img src="assets/images/films/collection.jpg" alt="Collection Sakiliba">
+                        <div class="film-overlay">
+                            <a href="films/" class="btn btn-play">
+                                <i class="fas fa-play"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="film-info">
+                        <h3>Collection Sakiliba</h3>
+                        <p class="film-subtitle">9 films au total</p>
+                        <p class="film-year">2020-2025</p>
+                        <p class="film-genre">Fiction & Documentaire</p>
+                        <p class="film-director">Réalisés par Soussaba Cissé</p>
+                    </div>
+                </div>
+                
+                <div class="photo-card">
+                    <div class="photo-image">
+                        <img src="assets/images/photos/photo2.jpg" alt="Photo 2">
+                        <div class="photo-overlay">
+                            <a href="photos/photo2.html" class="btn btn-view">
+                                <i class="fas fa-eye"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="photo-info">
+                        <h3>Marché de Djenné</h3>
+                        <p class="photo-year">2022</p>
+                        <p class="photo-category">Documentaire</p>
+                    </div>
+                </div>
+                
+                <div class="photo-card">
+                    <div class="photo-image">
+                        <img src="assets/images/photos/photo3.jpg" alt="Photo 3">
+                        <div class="photo-overlay">
+                            <a href="photos/photo3.html" class="btn btn-view">
+                                <i class="fas fa-eye"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="photo-info">
+                        <h3>Fleuve Niger</h3>
+                        <p class="photo-year">2021</p>
+                        <p class="photo-category">Paysage</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="photos-cta">
+                <a href="photos/" class="btn btn-primary">Voir toutes nos photos</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hommage aux grands réalisateurs -->
+    <section class="hommage-preview">
+        <div class="container">
+            <div class="section-header">
+                <h2>Hommage aux Grands Réalisateurs</h2>
+                <p>Rendons hommage aux pionniers du cinéma malien</p>
+            </div>
+            
+            <div class="hommage-grid">
+                <div class="hommage-card">
+                    <div class="director-image">
+                        <img src="assets/images/directors/souleymane-cisse.jpg" alt="Souleymane Cissé">
+                    </div>
+                    <div class="director-info">
+                        <h3>Souleymane Cissé</h3>
+                        <p class="director-title">Pionnier du cinéma malien</p>
+                        <p class="director-bio">Réalisateur de "Yeelen" (La Lumière), premier film africain à remporter le Prix du Jury à Cannes</p>
+                        <a href="hommage.html#souleymane-cisse" class="btn btn-text">En savoir plus</a>
+                    </div>
+                </div>
+                
+                <div class="hommage-card">
+                    <div class="director-image">
+                        <img src="assets/images/directors/cheick-omar-sissoko.jpg" alt="Cheick Omar Sissoko">
+                    </div>
+                    <div class="director-info">
+                        <h3>Cheick Omar Sissoko</h3>
+                        <p class="director-title">Cinéaste engagé</p>
+                        <p class="director-bio">Réalisateur de "Guimba" et "La Genèse", défenseur du cinéma africain</p>
+                        <a href="hommage.html#cheick-omar-sissoko" class="btn btn-text">En savoir plus</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hommage-cta">
+                <a href="hommage.html" class="btn btn-outline">Découvrir tous les hommages</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Prix et récompenses -->
+    <section class="awards-preview">
+        <div class="container">
+            <div class="section-header">
+                <h2>Prix et Récompenses</h2>
+                <p>Reconnaissance internationale de notre excellence</p>
+            </div>
+            
+            <div class="awards-grid">
+                <div class="award-card">
+                    <div class="award-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h3>Festival de Cannes</h3>
+                    <p>Prix du Jury pour "Yeelen" (1987)</p>
+                </div>
+                
+                <div class="award-card">
+                    <div class="award-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3>FESPACO</h3>
+                    <p>Étalon d'Or de Yennenga (1995)</p>
+                </div>
+                
+                <div class="award-card">
+                    <div class="award-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3>Festival de Venise</h3>
+                    <p>Lion d'Or pour "La Genèse" (1999)</p>
+                </div>
+            </div>
+            
+            <div class="awards-cta">
+                <a href="prix.html" class="btn btn-outline">Voir tous nos prix</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Actualités récentes -->
+    <section class="news-preview">
+        <div class="container">
+            <div class="section-header">
+                <h2>Actualités Récentes</h2>
+                <p>Les dernières nouvelles de notre studio</p>
+            </div>
+            
+            <div class="news-grid">
+                <article class="news-card">
+                    <div class="news-image">
+                        <img src="assets/images/blog/news1.jpg" alt="Actualité 1">
+                    </div>
+                    <div class="news-content">
+                        <div class="news-meta">
+                            <span class="news-date">15 Janvier 2024</span>
+                            <span class="news-category">Exposition</span>
+                        </div>
+                        <h3>Nouvelle exposition en préparation</h3>
+                        <p>Préparation de notre prochaine exposition photo...</p>
+                        <a href="blog/article1.html" class="btn btn-text">Lire la suite</a>
+                    </div>
+                </article>
+                
+                <article class="news-card">
+                    <div class="news-image">
+                        <img src="assets/images/blog/news2.jpg" alt="Actualité 2">
+                    </div>
+                    <div class="news-content">
+                        <div class="news-meta">
+                            <span class="news-date">10 Janvier 2024</span>
+                            <span class="news-category">Festival</span>
+                        </div>
+                        <h3>Présentation au Festival Photo</h3>
+                        <p>Nos photos seront présentées au Festival International...</p>
+                        <a href="blog/article2.html" class="btn btn-text">Lire la suite</a>
+                    </div>
+                </article>
+            </div>
+            
+            <div class="news-cta">
+                <a href="blog/" class="btn btn-primary">Toutes les actualités</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Témoignages/Partenaires -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2>Nos Partenaires</h2>
+                <p>Ils nous font confiance pour leurs projets</p>
+            </div>
+            
+            <div class="partners-grid">
+                <div class="partner-logo">
+                    <img src="assets/images/partners/partner1.png" alt="Partenaire 1">
+                </div>
+                <div class="partner-logo">
+                    <img src="assets/images/partners/partner2.png" alt="Partenaire 2">
+                </div>
+                <div class="partner-logo">
+                    <img src="assets/images/partners/partner3.png" alt="Partenaire 3">
+                </div>
+                <div class="partner-logo">
+                    <img src="assets/images/partners/partner4.png" alt="Partenaire 4">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Sakiliba Photo</h3>
+                    <p>Excellence photographique malienne depuis 1980</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/SakilibaFotoProd" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="https://twitter.com/SakilibaFoto" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/sakilibafotoprod" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/sakilibafoto" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="about.html">À propos</a></li>
+                        <li><a href="photos/">Nos Photos</a></li>
+                        <li><a href="photographers/">Photographes</a></li>
+                        <li><a href="hommage.html">Hommage</a></li>
+                        <li><a href="prix.html">Prix</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="projects.html">Photographie</a></li>
+                        <li><a href="gallery/">Galerie</a></li>
+                        <li><a href="blog/">Actualités</a></li>
+                        <li><a href="investors.html">Investisseurs</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> Bamako, Mali</p>
+                    <p><i class="fas fa-phone"></i> (+223) 79 22 67 37 - Mali</p>
+                    <p><i class="fas fa-phone"></i> +33 7 62 00 38 35 - France</p>
+                    <p><i class="fas fa-envelope"></i> sakilibafoto@gmail.com</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Sakiliba Photo. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html> 

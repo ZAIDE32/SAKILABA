@@ -1,0 +1,24 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://votre-username.github.io/cinema-mali-production/sitemap.xml
+
+# Crawl-delay
+Crawl-delay: 1
+
+# Disallow admin areas (if any)
+Disallow: /admin/
+Disallow: /private/
+
+# Allow important directories
+Allow: /assets/
+Allow: /films/
+Allow: /directors/
+Allow: /gallery/
+Allow: /blog/
+
+# Block temporary files
+Disallow: /*.tmp$
+Disallow: /*.temp$
+Disallow: /*.log$ 

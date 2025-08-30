@@ -3,461 +3,674 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sakiliba Photo - Excellence Photographique Malienne</title>
-    <meta name="description" content="Studio de photographie malien, spécialisé dans la création d'images d'auteur et la promotion de la photographie africaine.">
-    
-    <!-- CSS -->
-    <link rel="stylesheet" href="assets/css/style.css">
-    
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Open+Sans:wght@300;400;600&family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
-    
-    <!-- Police africaine -->
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Adlam:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Sakiliba Photo - Production Cinématographique & Audiovisuelle</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&family=Ubuntu:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --sable: #D4A574;
+            --sable-dark: #B8956A;
+            --or: #D4AF37;
+            --noir: #111;
+            --beige: #F5F5DC;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: var(--noir);
+            background-color: #f9f9f9;
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3 {
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        .african-font {
+            font-family: 'Ubuntu', sans-serif;
+        }
+        
+        /* Header */
+        header {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                        url('texture-sable.jpg') center/cover;
+            height: 100vh;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-content {
+            text-align: center;
+            z-index: 2;
+            padding: 0 20px;
+        }
+        
+        .hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        
+        .hero-content p {
+            font-size: 1.5rem;
+            margin-bottom: 40px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .btn {
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+        
+        .btn-primary {
+            background-color: var(--or);
+            color: var(--noir);
+            border: 2px solid var(--or);
+        }
+        
+        .btn-primary:hover {
+            background-color: transparent;
+            color: var(--or);
+        }
+        
+        .btn-secondary {
+            background-color: transparent;
+            color: white;
+            border: 2px solid var(--sable);
+        }
+        
+        .btn-secondary:hover {
+            background-color: var(--sable);
+            color: var(--noir);
+        }
+        
+        /* Carrousel Affiches */
+        .movie-carousel {
+            position: relative;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        .carousel-container {
+            display: flex;
+            overflow: hidden;
+            position: relative;
+            height: 400px;
+        }
+        
+        .carousel-slide {
+            min-width: 100%;
+            transition: transform 0.5s ease-in-out;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .carousel-slide img {
+            width: 80%;
+            max-height: 400px;
+            object-fit: contain;
+            border: 5px solid var(--sable);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            transition: transform 0.3s ease;
+        }
+        
+        .carousel-slide img:hover {
+            transform: scale(1.03);
+        }
+        
+        .carousel-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0,0,0,0.5);
+            color: white;
+            border: none;
+            padding: 15px;
+            cursor: pointer;
+            z-index: 10;
+            border-radius: 50%;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+        }
+        
+        .carousel-btn:hover {
+            background-color: var(--or);
+            color: var(--noir);
+        }
+        
+        #prevBtn {
+            left: 20px;
+        }
+        
+        #nextBtn {
+            right: 20px;
+        }
+        
+        /* Présentation */
+        .presentation {
+            background-color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+        
+        .presentation h2 {
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            color: var(--noir);
+            position: relative;
+        }
+        
+        .presentation h2::after {
+            content: '';
+            display: block;
+            width: 100px;
+            height: 3px;
+            background-color: var(--or);
+            margin: 15px auto;
+        }
+        
+        .presentation-cards {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .presentation-card {
+            flex: 1;
+            min-width: 300px;
+            max-width: 350px;
+            background-color: var(--beige);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .presentation-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+        
+        .presentation-card i {
+            font-size: 2.5rem;
+            color: var(--or);
+            margin-bottom: 20px;
+        }
+        
+        .presentation-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--noir);
+        }
+        
+        .presentation-card p {
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+        
+        .presentation-card a {
+            color: var(--or);
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            transition: color 0.3s ease;
+        }
+        
+        .presentation-card a:hover {
+            color: var(--sable-dark);
+        }
+        
+        /* Stats */
+        .stats {
+            background-color: var(--noir);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        
+        .stats-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
+            gap: 30px;
+        }
+        
+        .stat-item {
+            flex: 1;
+            min-width: 200px;
+        }
+        
+        .stat-number {
+            font-size: 3rem;
+            font-weight: bold;
+            color: var(--or);
+            margin-bottom: 10px;
+        }
+        
+        .stat-label {
+            font-size: 1.2rem;
+        }
+        
+        /* Films par catégories */
+        .film-categories {
+            padding: 80px 20px;
+            background-color: #f5f5f5;
+        }
+        
+        .film-categories h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            color: var(--noir);
+        }
+        
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .category-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            position: relative;
+        }
+        
+        .category-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .category-card img {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+        }
+        
+        .category-info {
+            padding: 20px;
+        }
+        
+        .category-info h3 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: var(--noir);
+        }
+        
+        .category-info p {
+            color: #666;
+            margin-bottom: 15px;
+        }
+        
+        .coming-soon {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.7);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--noir);
+            color: white;
+            padding: 60px 20px 30px;
+        }
+        
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .footer-logo {
+            margin-bottom: 20px;
+        }
+        
+        .footer-logo img {
+            max-width: 200px;
+        }
+        
+        .footer-social {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .footer-social a {
+            color: white;
+            font-size: 1.5rem;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-social a:hover {
+            color: var(--or);
+        }
+        
+        .footer-contact h3, .footer-links h3 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            color: var(--or);
+        }
+        
+        .footer-contact p, .footer-links a {
+            margin-bottom: 10px;
+            display: block;
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: var(--or);
+        }
+        
+        .copyright {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid #333;
+            color: #999;
+        }
+        
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero-content p {
+                font-size: 1.2rem;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .presentation-cards {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .carousel-slide img {
+                width: 95%;
+            }
+            
+            .stats-container {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <img src="assets/images/logo/sakiliba-logo.png" alt="Sakiliba Photo" class="logo">
-                <span class="logo-text">Sakiliba Photo</span>
-            </div>
-            
-            <div class="nav-menu" id="nav-menu">
-                <a href="index.html" class="nav-link active">Accueil</a>
-                <a href="about.html" class="nav-link">À propos</a>
-                <a href="photos/" class="nav-link">Nos Photos</a>
-                <a href="photographers/" class="nav-link">Photographes</a>
-                <a href="hommage.html" class="nav-link">Hommage</a>
-                <a href="prix.html" class="nav-link">Prix</a>
-                <a href="projects.html" class="nav-link">Projets</a>
-                <a href="gallery/" class="nav-link">Galerie</a>
-                <a href="blog/" class="nav-link">Actualités</a>
-                <a href="investors.html" class="nav-link">Investisseurs</a>
-                <a href="contact.html" class="nav-link">Contact</a>
-            </div>
-            
-            <div class="nav-toggle" id="nav-toggle">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-video">
-            <video autoplay muted loop id="hero-video">
-                <source src="assets/videos/hero-cinema.mp4" type="video/mp4">
-            </video>
-            <div class="hero-overlay"></div>
-        </div>
-        
+    <!-- Header avec carrousel -->
+    <header>
         <div class="hero-content">
-            <h1 class="hero-title">
-                <span class="title-line">Capturer l'essence</span>
-                <span class="title-line">de notre culture</span>
-            </h1>
-            <p class="hero-subtitle">à travers des images puissantes et des histoires mémorables</p>
-            <div class="hero-buttons">
-                <a href="films/" class="btn btn-primary">Explorer nos films</a>
-                <a href="about.html" class="btn btn-secondary">En savoir plus</a>
+            <h1 class="african-font">SAKILIBA PHOTO</h1>
+            <p>Capturer l'essence de notre culture à travers des images puissantes et des histoires mémorables</p>
+            <div class="cta-buttons">
+                <a href="#films" class="btn btn-primary">Voir nos films</a>
+                <a href="#realisateurs" class="btn btn-secondary">Découvrir nos réalisateurs</a>
             </div>
         </div>
-        
-        <div class="hero-scroll">
-            <div class="scroll-indicator">
-                <i class="fas fa-chevron-down"></i>
+    </header>
+
+    <!-- Présentation -->
+    <section class="presentation">
+        <h2>Notre Histoire & Expertise</h2>
+        <div class="presentation-cards">
+            <div class="presentation-card">
+                <i class="fas fa-history"></i>
+                <h3>Notre Histoire</h3>
+                <p>Fondée en 2015, Sakiliba Photo s'est imposée comme un acteur majeur de la production audiovisuelle au Mali.</p>
+                <a href="a-propos.html">En savoir plus →</a>
+            </div>
+            <div class="presentation-card">
+                <i class="fas fa-globe-africa"></i>
+                <h3>Impact Culturel</h3>
+                <p>Nous promouvons le patrimoine malien à travers des récits authentiques qui traversent les frontières.</p>
+                <a href="a-propos.html">En savoir plus →</a>
+            </div>
+            <div class="presentation-card">
+                <i class="fas fa-film"></i>
+                <h3>Expertise Technique</h3>
+                <p>Une équipe talentueuse maîtrisant toutes les étapes de production, de l'écriture à la post-production.</p>
+                <a href="a-propos.html">En savoir plus →</a>
             </div>
         </div>
     </section>
 
-    <!-- À propos (aperçu) -->
-    <section class="about-preview">
-        <div class="container">
-            <div class="section-header">
-                <h2>Notre Mission</h2>
-                <p>Promouvoir et développer le cinéma malien à travers des productions de qualité</p>
+    <!-- Stats -->
+    <section class="stats">
+        <div class="stats-container">
+            <div class="stat-item">
+                <div class="stat-number" id="filmCount">0</div>
+                <div class="stat-label">Films Produits</div>
             </div>
-            
-            <div class="about-grid">
-                <div class="about-card">
-                    <div class="card-icon">
-                        <i class="fas fa-film"></i>
-                    </div>
-                    <h3>Production</h3>
-                    <p>Création de films d'auteur et de productions commerciales de haute qualité</p>
-                </div>
-                
-                <div class="about-card">
-                    <div class="card-icon">
-                        <i class="fas fa-users"></i>
-                    </div>
-                    <h3>Formation</h3>
-                    <p>Formation des jeunes talents du cinéma malien</p>
-                </div>
-                
-                <div class="about-card">
-                    <div class="card-icon">
-                        <i class="fas fa-globe-africa"></i>
-                    </div>
-                    <h3>Promotion</h3>
-                    <p>Diffusion du cinéma malien sur la scène internationale</p>
-                </div>
+            <div class="stat-item">
+                <div class="stat-number" id="awardCount">0</div>
+                <div class="stat-label">Prix Internationaux</div>
             </div>
-            
-            <div class="about-cta">
-                <a href="about.html" class="btn btn-outline">Découvrir notre histoire</a>
+            <div class="stat-item">
+                <div class="stat-number">7</div>
+                <div class="stat-label">Années d'Expérience</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">10+</div>
+                <div class="stat-label">Projets Réalisés</div>
             </div>
         </div>
     </section>
 
-    <!-- Films en vedette -->
-    <section class="featured-films">
-        <div class="container">
-            <div class="section-header">
-                <h2>Films en Vedette</h2>
-                <p>Nos dernières productions acclamées par la critique</p>
+    <!-- Carrousel Films -->
+    <section class="movie-carousel" id="films">
+        <h2 style="text-align: center; margin-bottom: 30px; font-size: 2.5rem;">Nos Films Récents</h2>
+        <div class="carousel-container">
+            <button class="carousel-btn" id="prevBtn"><i class="fas fa-chevron-left"></i></button>
+            <div class="carousel-slide">
+                <img src="affiche1.jpg" alt="Affiche du film [Titre 1], Sakiliba Productions">
             </div>
-            
-            <div class="films-carousel">
-                <div class="film-card">
-                    <div class="film-poster">
-                        <img src="assets/images/films/ngunu-ngunu-kan.jpg" alt="Ngunu Ngunu Kan">
-                        <div class="film-overlay">
-                            <a href="films/ngunu-ngunu-kan.html" class="btn btn-play">
-                                <i class="fas fa-play"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="film-info">
-                        <h3>Ngunu Ngunu Kan</h3>
-                        <p class="film-subtitle">(Les rumeurs de la guerre)</p>
-                        <p class="film-year">2023</p>
-                        <p class="film-genre">Long-métrage Fiction</p>
-                        <p class="film-director">Réalisé par Soussaba Cissé</p>
-                    </div>
-                </div>
-                
-                <div class="film-card">
-                    <div class="film-poster">
-                        <img src="assets/images/films/i-janto.jpg" alt="I Jantô">
-                        <div class="film-overlay">
-                            <a href="films/i-janto.html" class="btn btn-play">
-                                <i class="fas fa-play"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="film-info">
-                        <h3>I Jantô !</h3>
-                        <p class="film-subtitle">(Prends garde !)</p>
-                        <p class="film-year">2025</p>
-                        <p class="film-genre">Documentaire</p>
-                        <p class="film-director">Réalisé par Soussaba Cissé</p>
-                    </div>
-                </div>
-                
-                <div class="film-card">
-                    <div class="film-poster">
-                        <img src="assets/images/films/barkomo.jpg" alt="Barkomo">
-                        <div class="film-overlay">
-                            <a href="films/barkomo.html" class="btn btn-play">
-                                <i class="fas fa-play"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="film-info">
-                        <h3>Barkomo</h3>
-                        <p class="film-subtitle">Le royaume mystérieux</p>
-                        <p class="film-year">2024</p>
-                        <p class="film-genre">Long-métrage Fiction</p>
-                        <p class="film-director">Réalisé par Aboubacar Bable DRABA</p>
-                    </div>
-                </div>
-                
-                <div class="film-card">
-                    <div class="film-poster">
-                        <img src="assets/images/films/les-larmes-du-pagne.jpg" alt="Les larmes du pagne">
-                        <div class="film-overlay">
-                            <a href="films/les-larmes-du-pagne.html" class="btn btn-play">
-                                <i class="fas fa-play"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="film-info">
-                        <h3>Les larmes du pagne</h3>
-                        <p class="film-subtitle">Un drame social poignant</p>
-                        <p class="film-year">2023</p>
-                        <p class="film-genre">Court-métrage Fiction</p>
-                        <p class="film-director">Réalisé par Tapa Keita</p>
-                    </div>
-                </div>
-                
-                <div class="film-card">
-                    <div class="film-poster">
-                        <img src="assets/images/films/collection.jpg" alt="Collection Sakiliba">
-                        <div class="film-overlay">
-                            <a href="films/" class="btn btn-play">
-                                <i class="fas fa-play"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="film-info">
-                        <h3>Collection Sakiliba</h3>
-                        <p class="film-subtitle">9 films au total</p>
-                        <p class="film-year">2020-2025</p>
-                        <p class="film-genre">Fiction & Documentaire</p>
-                        <p class="film-director">Réalisés par Soussaba Cissé</p>
-                    </div>
-                </div>
-                
-                <div class="photo-card">
-                    <div class="photo-image">
-                        <img src="assets/images/photos/photo2.jpg" alt="Photo 2">
-                        <div class="photo-overlay">
-                            <a href="photos/photo2.html" class="btn btn-view">
-                                <i class="fas fa-eye"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="photo-info">
-                        <h3>Marché de Djenné</h3>
-                        <p class="photo-year">2022</p>
-                        <p class="photo-category">Documentaire</p>
-                    </div>
-                </div>
-                
-                <div class="photo-card">
-                    <div class="photo-image">
-                        <img src="assets/images/photos/photo3.jpg" alt="Photo 3">
-                        <div class="photo-overlay">
-                            <a href="photos/photo3.html" class="btn btn-view">
-                                <i class="fas fa-eye"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="photo-info">
-                        <h3>Fleuve Niger</h3>
-                        <p class="photo-year">2021</p>
-                        <p class="photo-category">Paysage</p>
-                    </div>
-                </div>
+            <div class="carousel-slide">
+                <img src="affiche2.jpg" alt="Affiche du film [Titre 2], Sakiliba Productions">
             </div>
-            
-            <div class="photos-cta">
-                <a href="photos/" class="btn btn-primary">Voir toutes nos photos</a>
+            <div class="carousel-slide">
+                <img src="affiche3.jpg" alt="Affiche du film [Titre 3], Sakiliba Productions">
             </div>
+            <button class="carousel-btn" id="nextBtn"><i class="fas fa-chevron-right"></i></button>
         </div>
     </section>
 
-    <!-- Hommage aux grands réalisateurs -->
-    <section class="hommage-preview">
-        <div class="container">
-            <div class="section-header">
-                <h2>Hommage aux Grands Réalisateurs</h2>
-                <p>Rendons hommage aux pionniers du cinéma malien</p>
-            </div>
-            
-            <div class="hommage-grid">
-                <div class="hommage-card">
-                    <div class="director-image">
-                        <img src="assets/images/directors/souleymane-cisse.jpg" alt="Souleymane Cissé">
-                    </div>
-                    <div class="director-info">
-                        <h3>Souleymane Cissé</h3>
-                        <p class="director-title">Pionnier du cinéma malien</p>
-                        <p class="director-bio">Réalisateur de "Yeelen" (La Lumière), premier film africain à remporter le Prix du Jury à Cannes</p>
-                        <a href="hommage.html#souleymane-cisse" class="btn btn-text">En savoir plus</a>
-                    </div>
-                </div>
-                
-                <div class="hommage-card">
-                    <div class="director-image">
-                        <img src="assets/images/directors/cheick-omar-sissoko.jpg" alt="Cheick Omar Sissoko">
-                    </div>
-                    <div class="director-info">
-                        <h3>Cheick Omar Sissoko</h3>
-                        <p class="director-title">Cinéaste engagé</p>
-                        <p class="director-bio">Réalisateur de "Guimba" et "La Genèse", défenseur du cinéma africain</p>
-                        <a href="hommage.html#cheick-omar-sissoko" class="btn btn-text">En savoir plus</a>
-                    </div>
+    <!-- Films par catégories -->
+    <section class="film-categories">
+        <h2>Notre Catalogue</h2>
+        <div class="category-grid">
+            <div class="category-card">
+                <img src="long-metrage.jpg" alt="Long métrage fiction">
+                <div class="category-info">
+                    <h3>Longs Métrages</h3>
+                    <p>2 œuvres primées</p>
                 </div>
             </div>
-            
-            <div class="hommage-cta">
-                <a href="hommage.html" class="btn btn-outline">Découvrir tous les hommages</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Prix et récompenses -->
-    <section class="awards-preview">
-        <div class="container">
-            <div class="section-header">
-                <h2>Prix et Récompenses</h2>
-                <p>Reconnaissance internationale de notre excellence</p>
-            </div>
-            
-            <div class="awards-grid">
-                <div class="award-card">
-                    <div class="award-icon">
-                        <i class="fas fa-trophy"></i>
-                    </div>
-                    <h3>Festival de Cannes</h3>
-                    <p>Prix du Jury pour "Yeelen" (1987)</p>
-                </div>
-                
-                <div class="award-card">
-                    <div class="award-icon">
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <h3>FESPACO</h3>
-                    <p>Étalon d'Or de Yennenga (1995)</p>
-                </div>
-                
-                <div class="award-card">
-                    <div class="award-icon">
-                        <i class="fas fa-award"></i>
-                    </div>
-                    <h3>Festival de Venise</h3>
-                    <p>Lion d'Or pour "La Genèse" (1999)</p>
+            <div class="category-card">
+                <img src="documentaire.jpg" alt="Documentaire">
+                <div class="category-info">
+                    <h3>Documentaires</h3>
+                    <p>3 projets marquants</p>
                 </div>
             </div>
-            
-            <div class="awards-cta">
-                <a href="prix.html" class="btn btn-outline">Voir tous nos prix</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Actualités récentes -->
-    <section class="news-preview">
-        <div class="container">
-            <div class="section-header">
-                <h2>Actualités Récentes</h2>
-                <p>Les dernières nouvelles de notre studio</p>
-            </div>
-            
-            <div class="news-grid">
-                <article class="news-card">
-                    <div class="news-image">
-                        <img src="assets/images/blog/news1.jpg" alt="Actualité 1">
-                    </div>
-                    <div class="news-content">
-                        <div class="news-meta">
-                            <span class="news-date">15 Janvier 2024</span>
-                            <span class="news-category">Exposition</span>
-                        </div>
-                        <h3>Nouvelle exposition en préparation</h3>
-                        <p>Préparation de notre prochaine exposition photo...</p>
-                        <a href="blog/article1.html" class="btn btn-text">Lire la suite</a>
-                    </div>
-                </article>
-                
-                <article class="news-card">
-                    <div class="news-image">
-                        <img src="assets/images/blog/news2.jpg" alt="Actualité 2">
-                    </div>
-                    <div class="news-content">
-                        <div class="news-meta">
-                            <span class="news-date">10 Janvier 2024</span>
-                            <span class="news-category">Festival</span>
-                        </div>
-                        <h3>Présentation au Festival Photo</h3>
-                        <p>Nos photos seront présentées au Festival International...</p>
-                        <a href="blog/article2.html" class="btn btn-text">Lire la suite</a>
-                    </div>
-                </article>
-            </div>
-            
-            <div class="news-cta">
-                <a href="blog/" class="btn btn-primary">Toutes les actualités</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Témoignages/Partenaires -->
-    <section class="testimonials">
-        <div class="container">
-            <div class="section-header">
-                <h2>Nos Partenaires</h2>
-                <p>Ils nous font confiance pour leurs projets</p>
-            </div>
-            
-            <div class="partners-grid">
-                <div class="partner-logo">
-                    <img src="assets/images/partners/partner1.png" alt="Partenaire 1">
+            <div class="category-card">
+                <img src="court-metrage.jpg" alt="Court métrage">
+                <div class="category-info">
+                    <h3>Courts Métrages</h3>
+                    <p>2 histoires percutantes</p>
                 </div>
-                <div class="partner-logo">
-                    <img src="assets/images/partners/partner2.png" alt="Partenaire 2">
+            </div>
+            <div class="category-card">
+                <img src="institutionnel.jpg" alt="Film institutionnel">
+                <div class="category-info">
+                    <h3>Institutionnels</h3>
+                    <p>5 collaborations</p>
                 </div>
-                <div class="partner-logo">
-                    <img src="assets/images/partners/partner3.png" alt="Partenaire 3">
-                </div>
-                <div class="partner-logo">
-                    <img src="assets/images/partners/partner4.png" alt="Partenaire 4">
+            </div>
+            <div class="category-card">
+                <img src="projets.jpg" alt="Projets à venir">
+                <div class="coming-soon">Projets à Venir</div>
+                <div class="category-info">
+                    <h3>En Développement</h3>
+                    <p>5 nouvelles œuvres</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Sakiliba Photo</h3>
-                    <p>Excellence photographique malienne depuis 1980</p>
-                    <div class="social-links">
-                        <a href="https://www.facebook.com/SakilibaFotoProd" target="_blank"><i class="fab fa-facebook"></i></a>
-                        <a href="https://twitter.com/SakilibaFoto" target="_blank"><i class="fab fa-twitter"></i></a>
-                        <a href="https://www.instagram.com/sakilibafotoprod" target="_blank"><i class="fab fa-instagram"></i></a>
-                        <a href="https://www.linkedin.com/in/sakilibafoto" target="_blank"><i class="fab fa-linkedin"></i></a>
-                    </div>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-col">
+                <div class="footer-logo">
+                    <img src="logo-sakiliba.png" alt="Logo Sakiliba Photo">
                 </div>
-                
-                <div class="footer-section">
-                    <h4>Navigation</h4>
-                    <ul>
-                        <li><a href="about.html">À propos</a></li>
-                        <li><a href="photos/">Nos Photos</a></li>
-                        <li><a href="photographers/">Photographes</a></li>
-                        <li><a href="hommage.html">Hommage</a></li>
-                        <li><a href="prix.html">Prix</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h4>Services</h4>
-                    <ul>
-                        <li><a href="projects.html">Photographie</a></li>
-                        <li><a href="gallery/">Galerie</a></li>
-                        <li><a href="blog/">Actualités</a></li>
-                        <li><a href="investors.html">Investisseurs</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h4>Contact</h4>
-                    <p><i class="fas fa-map-marker-alt"></i> Bamako, Mali</p>
-                    <p><i class="fas fa-phone"></i> (+223) 79 22 67 37 - Mali</p>
-                    <p><i class="fas fa-phone"></i> +33 7 62 00 38 35 - France</p>
-                    <p><i class="fas fa-envelope"></i> sakilibafoto@gmail.com</p>
+                <p>Racontons le Mali, une image à la fois.</p>
+                <div class="footer-social">
+                    <a href="https://linkedin.com/sakilibafoto" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://instagram.com/sakilibafotoprod" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://twitter.com/SakilibaFoto" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://facebook.com/SakilibaFotoProd" target="_blank"><i class="fab fa-facebook"></i></a>
                 </div>
             </div>
-            
-            <div class="footer-bottom">
-                <p>&copy; 2024 Sakiliba Photo. Tous droits réservés.</p>
+            <div class="footer-col">
+                <h3>Contact</h3>
+                <p><i class="fas fa-envelope"></i> sakilibafoto@gmail.com</p>
+                <p><i class="fas fa-phone"></i> (+223) 79 22 67 37 - Mali</p>
+                <p><i class="fas fa-phone"></i> +33 7 62 00 38 35 - France</p>
             </div>
+            <div class="footer-col">
+                <h3>Liens Utiles</h3>
+                <a href="a-propos.html">À propos</a>
+                <a href="films.html">Nos Films</a>
+                <a href="realisateurs.html">Réalisateurs</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2015-2023 SAKILIBA FOTO PRODUCTIONS. Tous droits réservés.</p>
         </div>
     </footer>
 
-    <!-- JavaScript -->
-    <script src="assets/js/main.js"></script>
+    <script>
+        // Animation compteur stats
+        function animateValue(id, start, end, duration) {
+            const obj = document.getElementById(id);
+            let startTimestamp = null;
+            const step = (timestamp) => {
+                if (!startTimestamp) startTimestamp = timestamp;
+                const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+                obj.innerHTML = Math.floor(progress * (end - start) + start);
+                if (progress < 1) {
+                    window.requestAnimationFrame(step);
+                }
+            };
+            window.requestAnimationFrame(step);
+        }
+        
+        // Démarrer l'animation quand la section est visible
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateValue("filmCount", 0, 12, 1000);
+                    animateValue("awardCount", 0, 5, 1000);
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {threshold: 0.5});
+        
+        observer.observe(document.querySelector(".stats"));
+
+        // Carrousel
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.carousel-slide');
+        const totalSlides = slides.length;
+        
+        document.getElementById('nextBtn').addEventListener('click', () => {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            updateCarousel();
+        });
+        
+        document.getElementById('prevBtn').addEventListener('click', () => {
+            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+            updateCarousel();
+        });
+        
+        function updateCarousel() {
+            slides.forEach((slide, index) => {
+                slide.style.transform = `translateX(${100 * (index - currentSlide)}%)`;
+            });
+        }
+        
+        // Auto-slide toutes les 5 secondes
+        setInterval(() => {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            updateCarousel();
+        }, 5000);
+    </script>
 </body>
-</html> 
+</html>
